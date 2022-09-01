@@ -74,13 +74,17 @@ Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyel
 Model yang telah dibuat dapat memprediksi nilai dari qualitas wine yang ada pada dataset. Karena pada proyek kali ini menggunakan 3 jenis algoritma, maka akan dibandingkan hasil prediksi dari masing-masing algoritma. Metrik yang digunakan pada setiap algoritma adalah MSE atau mean squared error.
 
 Mse merupakan metrik yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi. MSE didefinisikan dalam persamaan berikut:
-Gambar MSE
+
+![image](https://user-images.githubusercontent.com/62003049/187825463-410f0055-ac49-4af8-a56b-a5e280e62eda.png)
+
+
 Keterangan:
 N = jumlah dataset
 yi = nilai sebenarnya
 y_pred = nilai prediksi
 
-Gambar MSE1
-Gambar MSE2
+![image](https://user-images.githubusercontent.com/62003049/187825426-a35fd867-e3d8-40bc-943d-2d2c890940f2.png)
+
+![hasil mse](https://user-images.githubusercontent.com/62003049/187825382-12644467-69ec-4a8d-8898-48301dbfeaf8.PNG)
 
 Terlihat, berdasarkan gambar prediksi tersebut, algoritma yang memberikan hasil prediksi paling mendekati adalah Boosting Algorithm.
