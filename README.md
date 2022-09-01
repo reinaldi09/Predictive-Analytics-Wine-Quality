@@ -77,14 +77,17 @@ Mse merupakan metrik yang menghitung jumlah selisih kuadrat rata-rata nilai sebe
 
 ![image](https://user-images.githubusercontent.com/62003049/187825463-410f0055-ac49-4af8-a56b-a5e280e62eda.png)
 
-
 Keterangan:
 N = jumlah dataset
 yi = nilai sebenarnya
 y_pred = nilai prediksi
 
+![mse1](https://user-images.githubusercontent.com/62003049/187825748-787875ca-c9f2-4c78-9df5-4fc1c48430c3.PNG)
+
 ![image](https://user-images.githubusercontent.com/62003049/187825426-a35fd867-e3d8-40bc-943d-2d2c890940f2.png)
 
-![hasil mse](https://user-images.githubusercontent.com/62003049/187825382-12644467-69ec-4a8d-8898-48301dbfeaf8.PNG)
+Berdasarkan hasil training model, didapatkanlah jumlah error yang paling kecil adalah algoritma Random Forest (RF).
 
-Terlihat, berdasarkan gambar prediksi tersebut, algoritma yang memberikan hasil prediksi paling mendekati adalah Boosting Algorithm.
+![hasil mse](https://user-images.githubusercontent.com/62003049/187826166-ae928048-1ee1-4eb3-83c9-b8c2a0c4991c.PNG)
+
+Terlihat, berdasarkan gambar prediksi dari 4 data tersebut, algoritma yang memberikan hasil prediksi paling mendekati adalah Random Forest.
