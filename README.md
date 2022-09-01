@@ -25,31 +25,37 @@ Tujuan yang ingin dicapai:
 ## Data Understanding
 Dataset yang digunakan pada proyek ini merupakan dataset mengenai kualitas wine yang diunduh dari UCI Machine Learning Repository Link: (https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/).
 Berikut beberapa variabel yang terdapat di dalam dataset wine quality UCI Machine Learning Repositories:
-1 - fixed acidity : kandungan asam organik volatilitas rendah seperti asam malat, laktat, tartarat atau sitrat
-2 - volatile acidity : ukuran asam lemak dengan berat molekul rendah (atau dapat disuling dengan uap)
-3 - citric acid : kandungan asam organik pada minuman dengan formula HOC(CO2H)
-4 - residual sugar : kandungan gula 
-5 - chlorides : kandungan klodira
-6 - free sulfur dioxide : tingkat kandungan sulfur dioksida
-7 - total sulfur dioxide : jumlah sulfur dioksida
-8 - density : massa jenis minuman
-9 - pH : tingkat keasaman minuman
-10 - sulphates : kandungan asam sulfat
-11 - alcohol : kandungan alkohol minuman
+- fixed acidity : kandungan asam organik volatilitas rendah seperti asam malat, laktat, tartarat atau sitrat
+- volatile acidity : ukuran asam lemak dengan berat molekul rendah (atau dapat disuling dengan uap)
+- citric acid : kandungan asam organik pada minuman dengan formula HOC(CO2H)
+- residual sugar : kandungan gula 
+- chlorides : kandungan klodira
+- free sulfur dioxide : tingkat kandungan sulfur dioksida
+- total sulfur dioxide : jumlah sulfur dioksida
+- density : massa jenis minuman
+- pH : tingkat keasaman minuman
+- sulphates : kandungan asam sulfat
+- alcohol : kandungan alkohol minuman
 Variabel Output:
-12 - quality (Nilai antara 0 sampai 10)
+- quality (Nilai antara 0 sampai 10)
 
 Untuk lebih jelasnya data yang terdapat pada dataset tersebut dapat dilihat pada gambar berikut:
+![image](https://user-images.githubusercontent.com/62003049/187919809-943dce52-d80d-4dca-84b9-4e2a1cd86bbc.png)
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+Untuk melihat sebaran data pada dataset, dapat kita lihat melalui data histogram di bawah ini:
+![image](https://user-images.githubusercontent.com/62003049/187924117-82c8740e-92dc-4411-8216-d92f82c4608f.png)
+
+Berdasarkan data histogram 'quality' yang merupakan fitur target (label), informasi yang dapat diperoleh yaitu:
+- Wine yang terdapat pada dataset didominasi oleh wine yang memiliki kualitas bernilai 5 dan 6
+- Distribusi kualitas miring ke kanan (right-skewed). Hal ini akan berimplikasi pada model.
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+Pada proyek ini dilakukan proses data preparation yaitu:
+   Pembagian dataset dengan fungsi train_test_split dari library sklearn
+   Proses pembagian dataset ini bertujuan untuk memisahkan antara data yang akan dilakukan proses training dan data yang akan
+   akan digunakan untuk pengujian. Tentunya data yang digunakan untuk proses pengujian haruslah data yang belum pernah dilihat    oleh model sebelumnya, sehingga proses pemisahan data ini sangat penting.
+   Berikut ini program yang digunakan pada proses splitting data:
+   ![image](https://user-images.githubusercontent.com/62003049/187921201-9c296291-28aa-42c0-a01d-cb8dd769b8ff.png)
 
 ## Modeling
 Model Machine Learning yang digunakan pada proyek ini ada 2 jenis algoritma yang akan dibandingkan berdasarkan hasil prediksi masing-masing algoritma. Algoritma yang pertama digunakan adalah algoritma random forest dan algoritma boosting.
@@ -60,13 +66,13 @@ Pada Algoritma Random Forest, parameter yang digunakan adalah sebagai berikut
 - random_state=16
 - n_jobs=-1
 Untuk lebih jelasnya dapat dilihat pada cuplikan kode dibawah ini:
-Gambar model random forest
+![image](https://user-images.githubusercontent.com/62003049/187921844-cf1c7d27-99dd-4cae-a8ee-86bbd6f497a6.png)
 
 Sedangkan pada Algoritma Boosting, parameter yang digunakan adalah sebagai berikut
-- learning rate = 
-- random state =
+- learning rate = 0.05
+- random state = 16
 Untuk lebih jelasnya dapat dilihat pada cuplikan kode dibawah ini:
-Gambar model Algoritma boosting
+![image](https://user-images.githubusercontent.com/62003049/187921949-c2d1929a-f16c-4980-ae0c-d086ec53fa0f.png)
 
 ## Evaluation
 Model yang telah dibuat dapat memprediksi nilai dari qualitas wine yang ada pada dataset. Karena pada proyek kali ini menggunakan 3 jenis algoritma, maka akan dibandingkan hasil prediksi dari masing-masing algoritma. Metrik yang digunakan pada setiap algoritma adalah MSE atau mean squared error.
@@ -80,12 +86,10 @@ N = jumlah dataset
 yi = nilai sebenarnya
 y_pred = nilai prediksi
 
-![mse1](https://user-images.githubusercontent.com/62003049/187825748-787875ca-c9f2-4c78-9df5-4fc1c48430c3.PNG)
+![image](https://user-images.githubusercontent.com/62003049/187925940-3528f511-4845-43e1-a1ac-ba94198998ec.png)
 
-![image](https://user-images.githubusercontent.com/62003049/187825426-a35fd867-e3d8-40bc-943d-2d2c890940f2.png)
+Berdasarkan hasil training model, didapatkanlah jumlah error yang paling kecil adalah Boosting Algorithm.
 
-Berdasarkan hasil training model, didapatkanlah jumlah error yang paling kecil adalah algoritma Random Forest (RF).
+![image](https://user-images.githubusercontent.com/62003049/187925821-d12192c4-b4c6-434d-b272-935a66e8af40.png)
 
-![hasil mse](https://user-images.githubusercontent.com/62003049/187826166-ae928048-1ee1-4eb3-83c9-b8c2a0c4991c.PNG)
-
-Terlihat, berdasarkan gambar prediksi dari 4 data tersebut, algoritma yang memberikan hasil prediksi paling mendekati adalah Random Forest.
+Terlihat, berdasarkan gambar prediksi dari 4 data tersebut, algoritma yang memberikan hasil prediksi paling mendekati adalah Boosting Algorithm.
