@@ -51,12 +51,12 @@ Berdasarkan data histogram 'quality' yang merupakan fitur target (label), inform
 
 ## _Data Preparation_
 Pada proyek ini dilakukan proses _data preparation_ yaitu:
-   Pembagian dataset dengan fungsi train_test_split dari library sklearn Proses pembagian dataset ini bertujuan untuk memisahkan antara data yang akan dilakukan proses training dan data yang akan digunakan untuk pengujian. Tentunya data yang digunakan untuk proses pengujian haruslah data yang belum pernah dilihat oleh model sebelumnya, sehingga proses pemisahan data ini sangat penting.
+   Pembagian dataset dengan fungsi train_test_split dari _library_ sklearn Proses pembagian dataset ini bertujuan untuk memisahkan antara data yang akan dilakukan proses training dan data yang akan digunakan untuk pengujian. Tentunya data yang digunakan untuk proses pengujian haruslah data yang belum pernah dilihat oleh model sebelumnya, sehingga proses pemisahan data ini sangat penting.
 Berikut ini program yang digunakan pada proses splitting data:
    ![image](https://user-images.githubusercontent.com/62003049/187921201-9c296291-28aa-42c0-a01d-cb8dd769b8ff.png)
 
 ## _Modeling_
-Model Machine Learning yang digunakan pada proyek ini ada 2 jenis algoritma yang akan dibandingkan berdasarkan hasil prediksi masing-masing algoritma. Algoritma yang pertama digunakan adalah algoritma _random forest_ dan algoritma _boosting_.
+Model _Machine Learning_ yang digunakan pada proyek ini ada 2 jenis algoritma yang akan dibandingkan berdasarkan hasil prediksi masing-masing algoritma. Algoritma yang pertama digunakan adalah algoritma _random forest_ dan algoritma _boosting_.
 
 Pada Algoritma _Random Forest_, parameter yang digunakan adalah sebagai berikut
 - n_estimators=25
