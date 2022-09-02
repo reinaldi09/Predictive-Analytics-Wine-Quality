@@ -1,6 +1,6 @@
 # Laporan Proyek Machine Learning - Ahmad Reinaldi Akbar
 
-## Project Overview
+## _Project Overview_
 
 Wine merupakan salah satu jenis minuman beralkohol yang banyak dikonsumsi oleh orang-orang di seluruh dunia. Salah satu negara pengekspor wine terbanyak adalah portugal. Untuk mengekspor wine tersebut portugal memerlukan jenis wine yang berkualitas tinggi untuk dijual ke berbagai negara di dunia. Wine yang berkualitas dihasilkan dari sertifikasi dan pengujian yang ketat. Sertifikasi wine umumnya menggunakan pengujian _physicochemical_ dan test sensor seperti kandungan klorida, sulfat, PH, dan lain sebagainya [1]. Data-data pengujian telah banyak didapatkan pada saat pengujian, namun jika ingin menentukan kualitas wine tersebut secara manual maka akan memerlukan waktu yang lama. Sehingga dibuatlah proyek ini untuk menentukan kualitas dari wine berdasarkan data pengujian kualitas wine. Proyek ini menggunakan _machine learning_ dengan metode _supervised learning_-regresi.
   
